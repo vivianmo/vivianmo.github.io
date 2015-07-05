@@ -183,12 +183,12 @@
 
 // If there are no errors, send the email
         if (!$errName && !$errEmail && !$errMessage) {
-            (mail ($to, $subject, $body, $from));
-            $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-        } 
-        else {
-            $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+            if (mail ($to, $subject, $body, $from)) {
+                $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+            }
+            else {
+                $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+            }
         }
     }
-}
-?>
+    ?>
