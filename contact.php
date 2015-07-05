@@ -32,6 +32,42 @@
 
     <body>
 
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            $from = 'Demo Contact Form'; 
+            $to = 'vmo@princeton.edu'; 
+            $subject = 'Message from Contact Demo ';
+
+            $body ="From: $name\n E-Mail: $email\n Message:\n $message";
+        // Check if name has been entered
+            if (!$_POST['name']) {
+                $errName = 'Please enter your name';
+            }
+
+        // Check if email has been entered and is valid
+            if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $errEmail = 'Please enter a valid email address';
+            }
+
+        //Check if message has been entered
+            if (!$_POST['message']) {
+                $errMessage = 'Please enter your message';
+            }
+
+// If there are no errors, send the email
+            if (!$errName && !$errEmail && !$errMessage) {
+                if (mail ($to, $subject, $body, $from)) {
+                    echo "good"; 
+                }
+                else {
+                    echo "bad";                }
+            }
+        }
+        ?>
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -91,6 +127,7 @@
                                         <span class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></span>
                                         <div class="col-md-8">
                                             <input id="name" name="name" type="text" placeholder="First Name" class="form-control">
+                                            <?php echo '<p class='text-danger'>$errName</p>';?>
                                         </div>
                                     </div>
 
@@ -98,6 +135,7 @@
                                         <span class="col-md-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                                         <div class="col-md-8">
                                             <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                                            <?php echo "<p class='text-danger'>$errEmail</p>";?>
                                         </div>
                                     </div>
 
@@ -105,6 +143,7 @@
                                         <span class="col-md-1 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                                         <div class="col-md-8">
                                             <textarea class="form-control" id="message" name="message" placeholder="Send me a message and I'll get back to you as soon as possible." rows="7"></textarea>
+                                            <?php echo "<p class='text-danger'>$errMessage</p>";?>
                                         </div>
                                     </div>
 
@@ -113,6 +152,10 @@
                                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <?php echo $result; ?>  
+                                    </div>
+
                                 </fieldset>
                             </form>
                         </div>
@@ -155,40 +198,3 @@
     </body>
 
     </html>
-
-    <?php
-    if (isset($_POST["submit"])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $from = 'Demo Contact Form'; 
-        $to = 'vmo@princeton.edu'; 
-        $subject = 'Message from Contact Demo ';
-        
-        $body ="From: $name\n E-Mail: $email\n Message:\n $message";
-        // Check if name has been entered
-        if (!$_POST['name']) {
-            $errName = 'Please enter your name';
-        }
-        
-        // Check if email has been entered and is valid
-        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $errEmail = 'Please enter a valid email address';
-        }
-        
-        //Check if message has been entered
-        if (!$_POST['message']) {
-            $errMessage = 'Please enter your message';
-        }
-
-// If there are no errors, send the email
-        if (!$errName && !$errEmail && !$errMessage) {
-            if (mail ($to, $subject, $body, $from)) {
-                $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-            }
-            else {
-                $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-            }
-        }
-    }
-    ?>
