@@ -33,40 +33,40 @@
 
     <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Vivian Mo</a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Vivian Mo</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li>
+                            <a href="gifportfolio.html">Gif Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html#about">About</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="gifportfolio.html">Gif Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+            <!-- /.container -->
+        </nav>
 
         <!-- Page Content -->
         <div class="container">
@@ -78,13 +78,24 @@
                         <small>currently under construction</small>
                     </h1>
                 </div>
+
                 <div class="col-lg-12"> 
-                    <div id="form_sample"></div> <!-- Include JS file here -->
-                    <script src="js/form.js"></script>
-                </div>
+                    <form action="//formspree.io/vmo@princeton.edu"
+                    method="POST">
+                    <h4> Name: </h4>
+                    <input type="text" name="name">
+                    <h4> Email Adress: </h4>
+                    <input type="text" name="_replyto">
+                    <h4> Message: </h4>
+                    <textarea> </textarea>
+                    <input type="submit" value="Send">
+                </form>
             </div>
 
-            <!-- /.row -->
+        </div>
+
+
+        <!-- /.row -->
 
             <!--
 
@@ -130,24 +141,24 @@
 
         -->
 
-            <style>
-            .header {
-                color: #36A0FF;
-                font-size: 27px;
-                padding: 10px;
-            }
+        <style>
+        .header {
+            color: #36A0FF;
+            font-size: 27px;
+            padding: 10px;
+        }
 
-            .bigicon {
-                font-size: 35px;
-                color: #36A0FF;
-            }
-            </style>
+        .bigicon {
+            font-size: 35px;
+            color: #36A0FF;
+        }
+        </style>
 
-    <!-- Footer -->
-    <footer>
-        <div id="contact" class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
+        <!-- Footer -->
+        <footer>
+            <div id="contact" class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
                     <!--<h4><strong>Vivian Mo</strong>
                     </h4>
                     <!--<p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>-->
@@ -175,15 +186,15 @@
         </div>
     </footer>
 
-        </div>
-        <!-- /.container -->
+</div>
+<!-- /.container -->
 
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

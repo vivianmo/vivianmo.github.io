@@ -2,7 +2,7 @@
 var x = document.getElementById("form_sample");
 var createform = document.createElement('form'); // Create New Element Form
 createform.setAttribute("action", "http://formspree.io/vmo@princeton.edu"); // Setting Action Attribute on Form
-createform.setAttribute("method", "post"); // Setting Method Attribute on Form
+createform.setAttribute("method", "POST"); // Setting Method Attribute on Form
 x.appendChild(createform);
 
 
