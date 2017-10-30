@@ -15,12 +15,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,9 +50,9 @@
 
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-md-offset-2 col-md-8">
-                  <div id="navbar" class="meta-text">
-                    <ul class="nav navbar-nav navbar-right">
+                <div class="col-xs-12 col-md-12">
+                  <div id="navbar">
+                    <ul class="nav navbar-right">
                         <li><a href="#about">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="gifportfolio.html">Gif Portfolio</a></li>
@@ -66,38 +65,51 @@
             </div>
             <!-- /.container -->
 
-            <!-- Header -->
-            <header id="top" class="header">
-                <div class="text-vertical-center">
-                    <h1>Vivian Mo</h1>
-                    <h3>crazychipmunk</h3>
-                    <h3>Electrical Engineer</h3>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.linkedin.com/pub/vivian-mo/100/a4a/71b"><i class="fa fa-linkedin fa-fw fa-2x" style="color:#ff26cf"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://crazychipmunk.tumblr.com/"><i class="fa fa-tumblr fa-fw fa-2x" style="color:#ff4a00"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/vivianmo"><i class="fa fa-github fa-fw fa-2x" style="color:#ff26cf"></i></a>
-                        </li>
-                        <li>
-                            <a href="contact.html"><i class="fa fa-envelope fa-fw fa-2x" style="color:#ff4a00"></i></a>
-                        </li>
-                    </ul>
-                    <br>
-                    <!--<a href="http://crazychipmunk.tumblr.com/" class="btn btn-dark btn-lg">tumblr</a> -->
-                </div>
-            </header>
+            <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div>
+                        <h1>Vivian Mo</h1>
+                        <h3>crazychipmunk</h3>
+                        <h3>Electrical Engineer</h3>
+                        <br>
+                        <ul class="nav">
+                            <li>
+                                <a href="https://www.linkedin.com/pub/vivian-mo/100/a4a/71b"><i class="fa fa-linkedin fa-fw fa-2x pink"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://crazychipmunk.tumblr.com/"><i class="fa fa-tumblr fa-fw fa-2x orange"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/vivianmo"><i class="fa fa-github fa-fw fa-2x pink"></i></a>
+                            </li>
+                            <li>
+                                <a href="contact.html"><i class="fa fa-envelope fa-fw fa-2x orange"></i></a>
+                            </li>
+                        </ul>
+                        <div id="front-gif">
+                          <img class="img-responsive pull-right" src="img/panda.gif">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <p class="lead" align="left"> Hello World! My name is Vivian Mo and I am currently a senior at Princeton University majoring in Electrical Engineering.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div id="front-gif">
+                      <img class="img-responsive pull-right" src="img/me-2.jpg">
+                    </div>
+                  </div>
+              </div>
+            </div>
 
             <!-- About -->
             <section id="about" class="about">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
-                        <img class="img-portfolio img-responsive" src="img/me.jpg" style="">
+                        <img class="img-responsive" src="img/me-2.jpg" style="">
                         <br>
 
                         </div>
@@ -129,70 +141,7 @@
                 <!-- /.container -->
             </section>
 
-        <!-- Portfolio -
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <h2>Select Projects</h2>
-                        <hr class="small">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="portfolio-item">
-                                    <a href="http://devpost.com/software/mini-med-h2blv">
-                                        <img class="img-portfolio img-responsive" src="img/minimed.jpg" style="width:500px; height:375px">
-                                    </a>
-                                    <h3>
-                                        <a href="http://devpost.com/software/mini-med-h2blv">Mini-Med</a>
-                                    </h3>
-                                    <p>A device that collects and displays real-time biomedical data on a website that can then be viewed by a doctor to provide a remote diagnosis</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="portfolio-item">
-                                    <a href="happywagon.html">
-                                        <img class="img-portfolio img-responsive" src="img/happywagon.png" style="width:500px; height:375px">
-                                    </a>
-                                    <h3>
-                                        <a href="happywagon.html">Happy Wagon</a>
-                                    </h3>
-                                    <p>Android app based on Stargirl's happy wagon from Jerry Spinelli's 2000 novel <i>Stargirl</i></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="portfolio-item">
-                                    <a href="gifportfolio.html">
-                                        <img class="img-portfolio img-responsive" src="img/crazychipmunk.gif" style="width:500px; height:375px">
-                                    </a>
-                                    <h3>
-                                        <a href="gifportfolio.html">crazychipmunk</a>
-                                    </h3>
-                                    <p>tumblr blog dedicated to gifs and graphics on which original posts have garnered 2 million reblogs and likes</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="portfolio-item">
-                                    <a href="scotty.html">
-                                        <img class="img-portfolio img-responsive" src="img/scotty.png" style="width:500px; height:375px">
-                                    </a>
-                                    <h3>
-                                        <a href="scotty.html">Scotty</a>
-                                    </h3>
-                                    <p>An Android app that displays data from and communicates with a Bluetooth Low-Energy transceiver in real time for remote access </p>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <a href="projects.html" class="btn-lg btn-dark">View More Items</a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <hr>
-
-
         <!-- Footer -->
         <footer>
             <div id="contact" class="container">

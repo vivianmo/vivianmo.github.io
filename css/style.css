@@ -1,0 +1,107 @@
+@import url(bootstrap.min.css);
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.pink{
+  color: #ff26cf;
+}
+
+.orange{
+  color: #ff4a00
+}
+
+.bright_blue{
+  color: #41f4e8
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/5C.gif) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.img-about{
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#front-gif img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#navbar{
+  margin-bottom:2em;
+  padding-top:15px;
+  padding-bottom:15px;
+  float: left
+}
+#navbar a{
+  padding-top:0;
+  padding-bottom:0;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  width:100%;
+  height:100%;
+  float:left;
+  color: #ff26cf
+}
+#navbar a:hover{
+  color:#41f4e8 !important;
+  text-decoration: none
+}
+#navbar .clear{
+  clear:both
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 4;
+}
+
+#navbar li{
+  height:inherit;
+  display:inline !important
+}
+
+@media (max-width: 767px){
+  #navbar{padding-top:0;padding-bottom:0}
+  #navbar li{display:inline-block !important}
+}
+
+#top li{
+  height:inherit;
+  display:inline !important
+}
